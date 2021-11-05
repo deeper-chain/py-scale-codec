@@ -1610,6 +1610,38 @@
         ]
       ]
     },
-    "ContractExecResult": "ContractExecResultTo260"
+    "ContractExecResult": "ContractExecResultTo260",
+    "LookupSource": "MultiAddress",
+    "AccountInfo": "AccountInfoWithDualRefCount",
+    "IpV4": "Vec<u8>",
+    "CountryRegion": "Vec<u8>",
+    "DurationEras": "u8",
+    "CampaignId": "u16",
+    "CreditLevel": {
+      "type": "enum",
+      "value_list": [
+        "Zero",
+        "One",
+        "Two",
+        "Three",
+        "Four",
+        "Five",
+        "Six",
+        "Seven",
+        "Eight"
+      ]
+    },
+    "CreditData": {
+      "type": "struct",
+      "type_mapping": [
+        ["campaign_id", "CampaignId"],
+        ["credit", "u64"],
+        ["initial_credit_level", "CreditLevel"],
+        ["rank_in_initial_credit_level", "u32"],
+        ["number_of_referees", "u8"],
+        ["current_credit_level", "CreditLevel"],
+        ["reward_eras", "EraIndex"]
+      ]
+    }
   }
 }
